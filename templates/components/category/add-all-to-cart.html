@@ -1,0 +1,29 @@
+{{!--
+
+`products`:
+    The object is enumerated to extract product IDs that
+    will be placed into 'data-product-ids' attribute
+
+--}}
+
+<a data-event-type="product-click" data-button-type="add-all-cart" class="button button--medium button--primary" {{#if products.length '>' '1'}}data-product-ids="{{#each products}}{{this.id}},{{/each}}"{{/if}}>{{lang 'Add All To Cart'}}</a>
+<span class="product-status-message aria-description--hidden">{{lang 'All items have been added'}}</span>
+
+<a data-button-type="empty-cart" class="button button--medium button--primary u-hiddenVisually">{{lang 'Remove All Items'}}</a>
+<span class="product-status-message aria-description--hidden">{{lang 'Cart has been emptied.'}}</span>
+
+<div class="alertBox alertBox--success categoryAttributes-message" style="display: none;">
+    <div class="alertBox-column alertBox-icon">
+        <icon glyph="ic-success" class="icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg></icon>
+    </div>
+    <p class="alertBox-column alertBox-message"></p>
+</div>
+
+<div class="alertBox alertBox--error categoryAttributes-message" style="display: none;">
+    <div class="alertBox-column alertBox-icon">
+        <icon glyph="ic-error" class="icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg></icon>
+    </div>
+    <p class="alertBox-column alertBox-message">
+        <p class="alertBox-column alertBox-message"></p>
+    </p>
+</div>

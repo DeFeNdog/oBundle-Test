@@ -1,0 +1,10 @@
+{
+  "customLayouts": {
+    "brand": {},
+    "category": {},
+    "page": {},
+    "product": {}
+  },
+  "normalStoreUrl": "https://obundletest1.mybigcommerce.com",
+  "port": 3000
+}
